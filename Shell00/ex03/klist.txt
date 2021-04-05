@@ -1,0 +1,5 @@
+Credentials cache: API:E307FB6C-6411-41C3-930F-456A255C6C9E
+        Principal: sanghyle@42SEOUL.KR
+
+  Issued                Expires               Principal
+Mar 25 22:17:53 2021  Mar 26 08:17:49 2021  krbtgt/42SEOUL.KR@42SEOUL.KR
