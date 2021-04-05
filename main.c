@@ -6,7 +6,7 @@
 /*   By: sanghyle <sanghyle@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 05:40:58 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/05 07:12:35 by sanghyle         ###   ########.fr       */
+/*   Updated: 2021/04/06 05:43:21 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ extern void ft_ultimate_div_mod(int *a, int *b);
 extern void ft_putstr(char *str);
 extern void ft_rev_int_tab(int *tab, int size);
 extern void	ft_sort_int_tab(int *tab, int size);
-extern int		ft_strlen(char *str);
-extern char		*ft_strcpy(char *dest, char *src);
+extern int	ft_strlen(char *str);
+extern char	*ft_strcpy(char *dest, char *src);
 extern char *ft_strncpy(char *dest, char *src, unsigned int size);
 extern int ft_str_is_alpha(char *str);
 extern int ft_str_is_numeric(char *str);
@@ -45,14 +45,51 @@ extern unsigned int ft_strlcat(char *dest, char *src, unsigned int size);
 int		main(void)
 
 {	
-	//ex02 1) origin에 있는 문자열을 dest 뒤쪽에 이어 붙이는 함수 입니다. dest 문자열 끝에 있는 '\0' 이것은 사라지고 그 위치에 origin이 바로 붙어버리는게 특징.
+	//ex05 복사될 문자열의 길이가 size-strlen(dst)-1개 이고 끝에 널문자를 삽입한다 결합되는 문자열의 총길이를 반환한다.
+	char src[] = "nice day";
+	char dest[] = "have a ";
+	unsigned int size;
+	unsigned int tot_size;
+
+	size = 11;
+	tot_size = ft_strlcat(src, dest, size);
+	printf("%d", tot_size);
+	printf("%s", src);
+	//ex04 1) str1에서 str2와 일치하는 문자열이 있는지 확인을 하는 함수입니다.
+	//     2) str1에 str2의 문자열과 일치하는 문자열이 있으면 해당 위치의 포인터(char* 타입)를 반환합니다.
+	//3) 당연하게도 일치하는 문자열을 찾지 못하면 null pointer를 반환하게 됩니다. (그렇기 때문에 널체크를 꼭! 해주어야 합니다.)
+	//4) 문자열을 찾아서, 문자열을 바꾸는 경우에는 원본 문자열 str1의 배열의 길이를 반드시 생각해야합니다. 배열의 범위를 넘으면, 큰일이니까요.
+	/*
+	char str1[] = "BlockDMask. He is a smart man";
+	char str2[] = "smart";
+	char* ptr = ft_strstr(str1, str2);
+	if(ptr != NULL)
+	{
+		ft_strncpy(ptr, "idiot", 5);
+		printf("strstr example : %s\n", ptr);
+	}
+	*/
+
+	//ex03 origin에 있는 문자열 n개를 문자열 dest 뒤쪽에 이어 붙이는 함수. dest 문자열 끝을 가리키는 널위치에 널문자를 없애고 origin의 문자 n번째까지 붙이는게 특징.
+	/*
 	char origin[] = "BlockDMask";
 	char dest[20] = "aaabbb";
-	char *s2 = malloc(sizeof(char) * 30);    // char 10개 크기만큼 동적 메모리 할당
+	unsigned int size;
+
+	size = 5;
+	//char *s2 = malloc(sizeof(char) * 30);    // char 10개 크기만큼 동적 메모리 할당
 	
-	s2 = ft_strcat(dest, origin);
-	printf("%s\n", s2);
-	free(s2);
+	ft_strncat(dest, origin, size);
+	printf("%s\n", dest);
+	*/
+	//ex02 1) origin에 있는 문자열을 dest 뒤쪽에 이어 붙이는 함수. dest 문자열 끝에 있는 '\0' 이것은 사라지고 그 위치에 origin이 바로 붙어버리는게 특징.
+	/*
+	char origin[] = "BlockDMask";
+	char dest[20] = "aaabbb";
+	
+	ft_strcat(dest, origin);
+	printf("%s\n", dest);
+	*/	
 	//ex01 매개변수 n에 0을 넣으면 항상 0, 음수를 넣으면 언더플로우가 되어 문자열 끝까지 비교
 	/*
 	char str1[] = "BlockDmask";
