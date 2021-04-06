@@ -6,23 +6,23 @@
 /*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:45:51 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/05 17:45:53 by sanghyle         ###   ########.fr       */
+/*   Updated: 2021/04/06 15:55:13 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
-	char *ptr;
+	char *pter;
 
-	ptr = dest;
-	while (*ptr)
-		++ptr;
+	pter = dest;
+	while (*pter)
+		++pter;
 	while (*src)
 	{
-		*ptr = *src;
+		*pter = *src;
 		++src;
-		++ptr;
+		++pter;
 	}
-	*ptr = 0;
+	*pter = 0;
 	return (dest);
 }

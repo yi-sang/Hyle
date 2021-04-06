@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanghyle <snaghyle@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/06 04:46:34 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/06 04:46:37 by sanghyle         ###   ########.fr       */
+/*   Created: 2021/04/06 15:47:40 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/06 15:52:45 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	i;
-	char			*ptr;
+	char			*pter;
 
 	i = 0;
-	ptr = dest;
-	while (*ptr)
-		++ptr;
+	pter = dest;
+	while (*pter)
+		++pter;
 	while (*src && i < nb)
 	{
-		*ptr = *src;
+		*pter = *src;
 		++src;
-		++ptr;
+		++pter;
 		++i;
 	}
-	*ptr = 0;
+	*pter = 0;
 	return (dest);
 }

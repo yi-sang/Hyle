@@ -6,13 +6,15 @@
 /*   By: sanghyle <sanghyle@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 05:40:58 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/06 05:43:21 by sanghyle         ###   ########.fr       */
+/*   Updated: 2021/04/07 08:17:35 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>    // malloc, free 함수가 선언된 헤더 파일
+#include <string.h>
+#include <memory.h>
 extern void ft_ft(int *nbr);
 extern void ft_ultimate_ft(int ********* nbr);
 extern void ft_swap(int *a, int *b);
@@ -41,20 +43,61 @@ extern char *ft_strcat(char *dest, char *src);
 extern char *ft_strncat(char *dest, char *src, unsigned int nb);
 extern char *ft_strstr(char *str, char *to_find);
 extern unsigned int ft_strlcat(char *dest, char *src, unsigned int size);
+extern int ft_atoi(char *str);
+extern void ft_putnbr_base(int nbr, char *base);
+extern int  ft_atoi_base(char *str, char *base);
+extern int ft_iterative_factorial(int nb);
+extern int ft_recursive_factorial(int nb);
+extern int ft_iterative_power(int nb, int power);
+extern int ft_recursive_power(int nb, int power);
+extern int ft_fibonacci(int index);
+extern int ft_sqrt(int nb);
+extern int ft_is_prime(int nb);
+extern int ft_find_next_prime(int nb);
+extern int ft_ten_queens_puzzle(void);
 
 int		main(void)
-
-{	
+{
+	//ex01
+	/*
+	printf("%d", ft_recursive_factorial(5));
+	*/
+	//ex00
+	
+	printf("%d", ft_iterative_factorial(5));
+	
+	//c05-------------------
+	//ex05(string=기수,base=밑)기수의 1의 자리수가 밑의 왼쪽으로부터 몇번째 * g_cnt^0)
+	/*
+printf("T7: %d\n", ft_atoi_base("     \t\v\f     +---------++-1235aaa776644", "a123567"));	
+	printf("%d\n", ft_atoi_base("  1234567890", "0123456789"));
+	printf("%d\n", ft_atoi_base("  +-+--accd", "abc"));
+	*/
+	//ex04
+/*	
+	ft_putnbr_base(13, "abcd");
+*/
+	//ex03 
+//	ft_atoi();
+	
 	//ex05 복사될 문자열의 길이가 size-strlen(dst)-1개 이고 끝에 널문자를 삽입한다 결합되는 문자열의 총길이를 반환한다.
-	char src[] = "nice day";
-	char dest[] = "have a ";
+	/*
+	char src[] = "good morning";
+	char dest[] = "hello";
 	unsigned int size;
-	unsigned int tot_size;
+//	unsigned int tot_size;
+	int i;
 
-	size = 11;
-	tot_size = ft_strlcat(src, dest, size);
-	printf("%d", tot_size);
-	printf("%s", src);
+	size = 5;
+	ft_strlcat(dest, src, size);
+//	printf("%d", tot_size);
+	i = 0;
+	while (dest[i])
+	{
+		printf("%c", dest[i]);
+		i++;
+	}
+	*/
 	//ex04 1) str1에서 str2와 일치하는 문자열이 있는지 확인을 하는 함수입니다.
 	//     2) str1에 str2의 문자열과 일치하는 문자열이 있으면 해당 위치의 포인터(char* 타입)를 반환합니다.
 	//3) 당연하게도 일치하는 문자열을 찾지 못하면 null pointer를 반환하게 됩니다. (그렇기 때문에 널체크를 꼭! 해주어야 합니다.)
@@ -63,15 +106,16 @@ int		main(void)
 	char str1[] = "BlockDMask. He is a smart man";
 	char str2[] = "smart";
 	char* ptr = ft_strstr(str1, str2);
+	printf("%s", ft_strstr("hello 42!!!"," "));
+	printf("%s", strstr("hello 42!!! 42?", " "));
 	if(ptr != NULL)
 	{
-		ft_strncpy(ptr, "idiot", 5);
+		strncpy(ptr, "idiot", 5);
 		printf("strstr example : %s\n", ptr);
 	}
 	*/
-
 	//ex03 origin에 있는 문자열 n개를 문자열 dest 뒤쪽에 이어 붙이는 함수. dest 문자열 끝을 가리키는 널위치에 널문자를 없애고 origin의 문자 n번째까지 붙이는게 특징.
-	/*
+	/*	
 	char origin[] = "BlockDMask";
 	char dest[20] = "aaabbb";
 	unsigned int size;
@@ -344,6 +388,6 @@ int		main(void)
 	ft_ft(&x);
 	printf("%d", x);
 	*/
-
+	return (0);
 
 }
