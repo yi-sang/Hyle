@@ -6,7 +6,7 @@
 /*   By: sanghyle <snaghyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 21:25:47 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/07 23:33:53 by sanghyle         ###   ########.fr       */
+/*   Updated: 2021/04/08 00:56:42 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ extern int ft_ten_queens_puzzle(void);
 int		main(void)
 {
 	//ex04
-	printf("%d", ft_fibonacci(5));
+	printf("%d", ft_fibonacci(10));
 	//ex03
 	/*
 	printf("%d", ft_recursive_power(5, 4));

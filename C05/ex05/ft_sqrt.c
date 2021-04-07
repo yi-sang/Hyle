@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/29 10:27:14 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/29 14:09:36 by gicho            ###   ########.fr       */
+/*   Created: 2021/04/08 01:46:46 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/08 01:55:38 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	long long i;
+	long long sqrt;
 
 	if (nb <= 0)
 		return (0);
-	i = 1;
-	while (i * i < nb)
-		++i;
-	if (i * i == nb)
-		return (i);
+	sqrt = 1;
+	while (sqrt * sqrt < nb)
+		++sqrt;
+	if (sqrt * sqrt == nb)
+		return (sqrt);
 	return (0);
 }
