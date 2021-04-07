@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanghyle <sanghyle@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: sanghyle <snaghyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/29 05:40:58 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/07 08:17:35 by sanghyle         ###   ########.fr       */
+/*   Created: 2021/04/07 21:25:47 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/07 23:33:53 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,24 @@ extern int ft_ten_queens_puzzle(void);
 
 int		main(void)
 {
+	//ex04
+	printf("%d", ft_fibonacci(5));
+	//ex03
+	/*
+	printf("%d", ft_recursive_power(5, 4));
+	*/
+	//ex02
+	/*
+	printf("%d", ft_iterative_power(5, 4));
+	*/
 	//ex01
 	/*
 	printf("%d", ft_recursive_factorial(5));
 	*/
 	//ex00
-	
+	/*
 	printf("%d", ft_iterative_factorial(5));
-	
+	*/
 	//c05-------------------
 	//ex05(string=기수,base=밑)기수의 1의 자리수가 밑의 왼쪽으로부터 몇번째 * g_cnt^0)
 	/*
@@ -389,5 +399,4 @@ printf("T7: %d\n", ft_atoi_base("     \t\v\f     +---------++-1235aaa776644", "a
 	printf("%d", x);
 	*/
 	return (0);
-
 }

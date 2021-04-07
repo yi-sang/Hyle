@@ -3,25 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: sanghyle <snaghyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 19:16:18 by gicho             #+#    #+#             */
-/*   Updated: 2020/01/29 10:26:52 by gicho            ###   ########.fr       */
+/*   Created: 2021/04/07 20:52:20 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/07 23:57:42 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	fib(int n, int a, int b)
-{
-	if (n == 0)
-		return (a);
-	if (n == 1)
-		return (b);
-	return (fib(n - 1, b, a + b));
-}
-
 int	ft_fibonacci(int index)
 {
-	if (index < 0)
-		return (-1);
-	return (fib(index, 0, 1));
+	int		cnt;
+	int		pre;
+	int		twice_pre;
+	char	f_ret[index];
+
+	cnt = 0;
+	pre = 1;
+	twice_pre = 0;
+	while (cnt++ <= index)
+	{
+		if (index == 0)
+			return (twice_pre);
+		if (index == 1)
+			return (pre);
+		if (index < 0)
+			return (-1);
+		f_ret[0] = twice_pre;
+		f_ret[1] = pre;
+		f_ret[cnt] = f_ret[cnt - 2] + f_ret[cnt - 1];
+	}
+	return ((int)f_ret[index]);
 }
