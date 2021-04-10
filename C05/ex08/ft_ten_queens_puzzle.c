@@ -5,74 +5,70 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 01:15:49 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/08 01:45:52 by sanghyle         ###   ########.fr       */
+/*   Created: 2021/04/08 23:04:24 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/09 00:03:00 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	g_seq[11];
-int		g_row[10];
-int		g_diag1[19];
-int		g_diag2[19];
-int		g_cnt;
+int g_col[20];
+int g_row[20];
+int g_ldash[40];
+int g_rdash[40];
+int g_cnt;
 
-void	set_chk_var(int r, int c, int val)
+void	print_map(void)
 {
-	g_row[r] = val;
-	g_diag1[c - r + 9] = val;
-	g_diag2[r + c] = val;
-}
+	int		i;
+	char	ch;
 
-void	rec(int c)
-{
-	int r;
-
-	if (c == 10)
-	{
-		write(1, g_seq, 11);
-		++g_cnt;
-	}
-	r = 0;
-	while (r < 10)
-	{
-		if (!g_row[r] && !g_diag1[c - r + 9] && !g_diag2[r + c])
-		{
-			set_chk_var(r, c, 1);
-			g_seq[c] = '0' + r;
-			rec(c + 1);
-			set_chk_var(r, c, 0);
-		}
-		++r;
-	}
-}
-
-void	init(void)
-{
-	int i;
-
-	g_seq[10] = '\n';
-	g_cnt = 0;
 	i = 0;
 	while (i < 10)
 	{
-		g_row[i] = 0;
-		g_diag1[i] = 0;
-		g_diag2[i] = 0;
-		++i;
+		ch = g_col[i] + '0';
+		write(1, &ch, 1);
+		i++;
 	}
-	while (i < 19)
+	write(1, "\n", 1);
+}
+
+void	update(int i, int lp, int rp, int dir)
+{
+	g_row[i] = dir;
+	g_ldash[lp] = dir;
+	g_rdash[rp] = dir;
+}
+
+void	backtrack(int depth, int lim)
+{
+	int i;
+	int lp;
+	int rp;
+
+	if (depth == lim)
 	{
-		g_diag1[i] = 0;
-		g_diag2[i] = 0;
-		++i;
+		print_map();
+		g_cnt++;
+		return ;
+	}
+	i = -1;
+	while (++i < lim)
+	{
+		g_col[depth] = i;
+		lp = depth - i + lim - 1;
+		rp = depth + i;
+		if (!g_row[i] && !g_ldash[lp] && !g_rdash[rp])
+		{
+			update(i, lp, rp, 1);
+			backtrack(depth + 1, lim);
+			update(i, lp, rp, 0);
+		}
 	}
 }
 
 int		ft_ten_queens_puzzle(void)
 {
-	init();
-	rec(0);
+	backtrack(0, 10);
 	return (g_cnt);
 }
