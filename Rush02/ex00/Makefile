@@ -1,15 +1,13 @@
 CFLAGS = -Wall -Wextra -Wextra
 
 TARGET = rush-02
-SRCDIR = srcs
-INCDIR = includes
-SRCS = $(wildcard $(SRCDIR)/*.c)
+SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 
 all: $(TARGET)
 
 %.o: %.c
-	gcc $(CFLAGS) -c $< -o  $@ -I $(INCDIR)
+	gcc $(CFLAGS) -c $< -o  $@ -I rush02.h
 
 $(TARGET): $(OBJS)
 	gcc $(CFLAGS) -o $@ $^

@@ -6,7 +6,7 @@
 /*   By: sanghyle <snaghyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 21:25:47 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/08 16:58:02 by sanghyle         ###   ########.fr       */
+/*   Updated: 2021/04/12 01:42:41 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,35 @@ extern int ft_sqrt(int nb);
 extern int ft_is_prime(int nb);
 extern int ft_find_next_prime(int nb);
 extern int ft_ten_queens_puzzle(void);
+extern struct s_stock_str	*ft_strs_to_tab(int argc, char **argv);
+extern void ft_show_tab(struct s_stock_str *par);
+extern int *ft_range(int min, int max);
 
-int		main(void)
+int		main(int argc, char **argv)
 {
+	//ex03
+	/*
+	int a[51];
+	int i;
+
+	i = 0;
+	while(a[i])
+	{
+		a[i] = *ft_range(1, 50);
+		write(1, a[i], 1);
+		i++;
+	}
+	*/
+	//C07-----------------------------
+	//ex04 ex05
+	
+	ft_show_tab(ft_strs_to_tab(argc, argv));
+
+	//C08------------------------------
 	//ex04
+	/*
 	printf("%d", ft_fibonacci(500));
+	*/
 	//ex03
 	/*
 	printf("%d", ft_recursive_power(5, 4));

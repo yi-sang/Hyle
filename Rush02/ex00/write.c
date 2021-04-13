@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   write.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: syoon <syoon@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/11 21:35:16 by syoon             #+#    #+#             */
+/*   Updated: 2021/04/11 21:35:17 by syoon            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "rush02.h"
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	while (*str)
+		ft_putchar(*(str++));
+}
+
+void	print_error_msg(char *str)
+{
+	ft_putstr(str);
+	ft_putstr("\n");
+}
+
+void	print(char *str)
+{
+	if (!g_is_first)
+		ft_putstr(" ");
+	g_is_first = 0;
+	ft_putstr(str);
+}
