@@ -5,100 +5,63 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 21:31:50 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/13 22:04:20 by sanghyle         ###   ########.fr       */
+/*   Created: 2021/04/14 02:14:33 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/14 02:14:37 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		ft_strlen(char *str)
+char            *ft_strcat(char *str1, char *str2)
 {
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+    while (*str2)
+        *str1++ = *str2++;
+    *str1 = '\0';
+    return (str1);
 }
-
-char	*ft_strcpy(char *dest, char *src)
+int             ft_strlen(char *str)
 {
-	int i;
-
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	return (dest);
+    int len;
+    len = 0;
+    while (str[len])
+        len++;
+    return (len);
 }
-
-char	*ft_strcat(char *dest, char *src)
+unsigned int    calculate_total_len(int size, char **strs, char *sep)
 {
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (dest[i])
-		i++;
-	while (src[j])
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-	dest[i + j] = '\0';
-	return (dest);
+    int         idx;
+    unsigned    total_len;
+    total_len = 0;
+    idx = 0;
+    while (idx < size)
+        total_len += ft_strlen(strs[idx++]);
+    total_len += ((size - 1) * ft_strlen(sep));
+    return (total_len);
 }
-
-int		len_strs(char **strs, int size)
+char            *ft_strjoin(int size, char **strs, char *sep)
 {
-	int i;
-	int len;
-
-	i = 0;
-	len = 0;
-	while (i < size)
-	{
-		len += ft_strlen(strs[i]);
-		i++;
-	}
-	return (len);
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-	int		i;
-	char	*str;
-	int		len;
-
-	i = 1;
-	if (size <= 0 || strs == NULL || sep == NULL)
-	{
-		if (!(str = malloc(1)))
-			return (0);
-		str[0] = '\0';
-		return (str);
-	}
-	len = len_strs(strs, size);
-	if (!(str = malloc((sizeof(char)) * len
-					+ ft_strlen(sep) * (size - 1) + 1)))
-		return (0);
-	str = ft_strcpy(str, strs[0]);
-	while (i < size)
-	{
-		str = ft_strcat(str, sep);
-		str = ft_strcat(str, strs[i]);
-		i++;
-	}
-	return (str);
-}
-#include <stdio.h>
-int		main(void)
-{
-	char *strs[] = {"", "", ""};
-	char *sep = ",";
-	printf("%s", ft_strjoin(3, strs, sep));
+    unsigned int    total_len;
+    int             idx;
+    char            *result;
+    char            *ptr;
+    if (size == 0)
+    {
+        result = (char *)malloc(sizeof(char) * 1);
+        *result = '\0';
+        return (result);
+    }
+    total_len = calculate_total_len(size, strs, sep);
+    if (!(result = (char *)malloc(sizeof(char) * (total_len + 1))))
+        return (NULL);
+    idx = 0;
+    ptr = result;
+    result[0] = '\0';
+    result = ft_strcat(result, strs[idx++]);
+    while (idx < size)
+    {
+        result = ft_strcat(result, sep);
+        result = ft_strcat(result, strs[idx++]);
+    }
+    *result = '\0';
+    return (ptr);
 }

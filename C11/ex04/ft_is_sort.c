@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/03 22:26:52 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/04 22:39:06 by gicho            ###   ########.fr       */
+/*   Created: 2021/04/14 01:47:08 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/14 01:47:58 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 {
-	int k;
+	int norm;
 	int tmp;
 
-	k = 0;
+	norm = 0;
 	while (length-- > 1)
 	{
 		tmp = f(tab[length], tab[length - 1]);
 		if (tmp == 0)
 			continue;
-		if (k == 0)
-			k = tmp;
-		else if ((k < 0 && tmp > 0) || (k > 0 && tmp < 0))
+		if (norm == 0)
+			norm = tmp;
+		else if ((norm < 0 && tmp > 0) || (norm > 0 && tmp < 0))
 			return (0);
 	}
 	return (1);

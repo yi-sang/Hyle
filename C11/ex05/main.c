@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/04 16:46:56 by gicho             #+#    #+#             */
-/*   Updated: 2020/02/05 17:54:58 by gicho            ###   ########.fr       */
+/*   Created: 2021/04/14 04:43:26 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/14 06:23:19 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ex05.h"
+#include "cal.h"
 
-int		g_op_idx[50];
+int		g_op_index[50];
 int		(*g_f[5])(int, int);
 char	*g_err_msg[2];
 
 void	init(void)
 {
-	g_op_idx['/'] = 0;
-	g_op_idx['%'] = 1;
-	g_op_idx['+'] = 2;
-	g_op_idx['-'] = 3;
-	g_op_idx['*'] = 4;
+	g_op_index['/'] = 0;
+	g_op_index['%'] = 1;
+	g_op_index['+'] = 2;
+	g_op_index['-'] = 3;
+	g_op_index['*'] = 4;
 	g_f[0] = div;
 	g_f[1] = mod;
 	g_f[2] = sum;
@@ -55,9 +55,9 @@ int		main(int argc, char *argv[])
 	val1 = ft_atoi(argv[1]);
 	val2 = ft_atoi(argv[3]);
 	if (val2 == 0 && (op == '/' || op == '%'))
-		ft_putstr(g_err_msg[g_op_idx[(int)op]]);
+		ft_putstr(g_err_msg[g_op_index[(int)op]]);
 	else
-		ft_putnbr(g_f[g_op_idx[(int)op]](val1, val2));
+		ft_putnbr(g_f[g_op_index[(int)op]](val1, val2));
 	ft_putstr("\n");
 	return (0);
 }
