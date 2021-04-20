@@ -5,8 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanghyle <snaghyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+<<<<<<< HEAD
 /*   Created: 2021/04/07 21:25:47 by sanghyle          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/04/12 01:42:41 by sanghyle         ###   ########.fr       */
+=======
+/*   Updated: 2021/04/08 00:56:42 by sanghyle         ###   ########.fr       */
+>>>>>>> parent of 1305980... 1'nd
+=======
+/*   Created: 2021/03/29 05:40:58 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/05 07:12:35 by sanghyle         ###   ########.fr       */
+>>>>>>> parent of 4190d93... sleep
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +32,8 @@ extern void ft_ultimate_div_mod(int *a, int *b);
 extern void ft_putstr(char *str);
 extern void ft_rev_int_tab(int *tab, int size);
 extern void	ft_sort_int_tab(int *tab, int size);
-extern int	ft_strlen(char *str);
-extern char	*ft_strcpy(char *dest, char *src);
+extern int		ft_strlen(char *str);
+extern char		*ft_strcpy(char *dest, char *src);
 extern char *ft_strncpy(char *dest, char *src, unsigned int size);
 extern int ft_str_is_alpha(char *str);
 extern int ft_str_is_numeric(char *str);
@@ -79,11 +88,16 @@ int		main(int argc, char **argv)
 	
 	ft_show_tab(ft_strs_to_tab(argc, argv));
 
+<<<<<<< HEAD
 	//C08------------------------------
 	//ex04
+<<<<<<< HEAD
 	/*
 	printf("%d", ft_fibonacci(500));
 	*/
+=======
+	printf("%d", ft_fibonacci(10));
+>>>>>>> parent of 1305980... 1'nd
 	//ex03
 	/*
 	printf("%d", ft_recursive_power(5, 4));
@@ -150,24 +164,17 @@ printf("T7: %d\n", ft_atoi_base("     \t\v\f     +---------++-1235aaa776644", "a
 	*/
 	//ex03 origin에 있는 문자열 n개를 문자열 dest 뒤쪽에 이어 붙이는 함수. dest 문자열 끝을 가리키는 널위치에 널문자를 없애고 origin의 문자 n번째까지 붙이는게 특징.
 	/*	
+=======
+{	
+	//ex02 1) origin에 있는 문자열을 dest 뒤쪽에 이어 붙이는 함수 입니다. dest 문자열 끝에 있는 '\0' 이것은 사라지고 그 위치에 origin이 바로 붙어버리는게 특징.
+>>>>>>> parent of 4190d93... sleep
 	char origin[] = "BlockDMask";
 	char dest[20] = "aaabbb";
-	unsigned int size;
-
-	size = 5;
-	//char *s2 = malloc(sizeof(char) * 30);    // char 10개 크기만큼 동적 메모리 할당
+	char *s2 = malloc(sizeof(char) * 30);    // char 10개 크기만큼 동적 메모리 할당
 	
-	ft_strncat(dest, origin, size);
-	printf("%s\n", dest);
-	*/
-	//ex02 1) origin에 있는 문자열을 dest 뒤쪽에 이어 붙이는 함수. dest 문자열 끝에 있는 '\0' 이것은 사라지고 그 위치에 origin이 바로 붙어버리는게 특징.
-	/*
-	char origin[] = "BlockDMask";
-	char dest[20] = "aaabbb";
-	
-	ft_strcat(dest, origin);
-	printf("%s\n", dest);
-	*/	
+	s2 = ft_strcat(dest, origin);
+	printf("%s\n", s2);
+	free(s2);
 	//ex01 매개변수 n에 0을 넣으면 항상 0, 음수를 넣으면 언더플로우가 되어 문자열 끝까지 비교
 	/*
 	char str1[] = "BlockDmask";

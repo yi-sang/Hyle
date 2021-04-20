@@ -3,45 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   ft_advanced_sort_string_tab.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
+/*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 04:33:30 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/14 06:27:15 by sanghyle         ###   ########.fr       */
+/*   Created: 2020/02/04 17:59:46 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/04 21:02:24 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(char **a, char **b)
+int		ft_get_tab_size(char **tab)
 {
-	char *c;
+	int ret;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	ret = 0;
+	while (tab[ret])
+		++ret;
+	return (ret);
 }
 
 void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
 {
-	int	i;
-	int	size;
-	int	swap;
+	int		i;
+	int		j;
+	int		size;
+	char	*tmp;
 
-	size = 0;
-	while (tab[size])
-		size++;
-	while (1)
+	size = ft_get_tab_size(tab);
+	i = 1;
+	while (i++ < size)
 	{
-		i = 0;
-		swap = 0;
-		while (i < size - 1)
+		j = 0;
+		while (++j < size)
 		{
-			if ((*cmp)(tab[i], tab[i + 1]) > 0)
+			if (cmp(tab[j - 1], tab[j]) > 0)
 			{
-				ft_swap(&tab[i], &tab[i + 1]);
-				swap = 1;
+				tmp = tab[j - 1];
+				tab[j - 1] = tab[j];
+				tab[j] = tmp;
 			}
-			i++;
 		}
-		if (!swap)
-			break ;
 	}
 }

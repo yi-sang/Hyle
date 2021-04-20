@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_string_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
+/*   By: gicho <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 04:09:36 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/14 04:10:38 by sanghyle         ###   ########.fr       */
+/*   Created: 2020/02/04 17:51:55 by gicho             #+#    #+#             */
+/*   Updated: 2020/02/04 17:52:12 by gicho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_strcmp(char *s1, char *s2)
 	return (*s1 - *s2);
 }
 
-int		ft_tab_size(char **tab)
+int		ft_get_tab_size(char **tab)
 {
 	int ret;
 
@@ -39,7 +39,7 @@ void	ft_sort_string_tab(char **tab)
 	int		size;
 	char	*tmp;
 
-	size = ft_tab_size(tab);
+	size = ft_get_tab_size(tab);
 	i = 1;
 	while (i++ < size)
 	{
