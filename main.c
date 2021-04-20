@@ -10,12 +10,17 @@
 <<<<<<< HEAD
 /*   Updated: 2021/04/12 01:42:41 by sanghyle         ###   ########.fr       */
 =======
+<<<<<<< HEAD
 /*   Updated: 2021/04/08 00:56:42 by sanghyle         ###   ########.fr       */
 >>>>>>> parent of 1305980... 1'nd
 =======
 /*   Created: 2021/03/29 05:40:58 by sanghyle          #+#    #+#             */
 /*   Updated: 2021/04/05 07:12:35 by sanghyle         ###   ########.fr       */
 >>>>>>> parent of 4190d93... sleep
+=======
+/*   Updated: 2021/04/07 23:33:53 by sanghyle         ###   ########.fr       */
+>>>>>>> parent of 1bfe7ac... sleep
+>>>>>>> 8b67d24e8d635b988866369ddd9b8b1ff39e3f1a
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +101,13 @@ int		main(int argc, char **argv)
 	printf("%d", ft_fibonacci(500));
 	*/
 =======
+<<<<<<< HEAD
 	printf("%d", ft_fibonacci(10));
 >>>>>>> parent of 1305980... 1'nd
+=======
+	printf("%d", ft_fibonacci(5));
+>>>>>>> parent of 1bfe7ac... sleep
+>>>>>>> 8b67d24e8d635b988866369ddd9b8b1ff39e3f1a
 	//ex03
 	/*
 	printf("%d", ft_recursive_power(5, 4));
