@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
+/*   By: sanghyle <snaghyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/08 01:13:46 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/08 01:13:49 by sanghyle         ###   ########.fr       */
+/*   Created: 2021/04/07 20:50:44 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/07 20:50:47 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

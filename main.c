@@ -6,7 +6,11 @@
 /*   By: sanghyle <snaghyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 21:25:47 by sanghyle          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/04/12 01:42:41 by sanghyle         ###   ########.fr       */
+=======
+/*   Updated: 2021/04/07 23:33:53 by sanghyle         ###   ########.fr       */
+>>>>>>> parent of 1bfe7ac... sleep
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +85,13 @@ int		main(int argc, char **argv)
 
 	//C08------------------------------
 	//ex04
+<<<<<<< HEAD
 	/*
 	printf("%d", ft_fibonacci(500));
 	*/
+=======
+	printf("%d", ft_fibonacci(5));
+>>>>>>> parent of 1bfe7ac... sleep
 	//ex03
 	/*
 	printf("%d", ft_recursive_power(5, 4));
