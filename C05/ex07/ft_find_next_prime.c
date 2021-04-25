@@ -3,20 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanghyle <snaghyle@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sanghyle <sanghyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD
-/*   Created: 2021/04/08 01:15:29 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/08 01:45:50 by sanghyle         ###   ########.fr       */
-=======
-<<<<<<< HEAD
-/*   Created: 2021/04/08 13:54:48 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/08 13:54:59 by sanghyle         ###   ########.fr       */
-=======
-/*   Created: 2021/04/07 20:52:47 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/07 20:53:08 by sanghyle         ###   ########.fr       */
->>>>>>> parent of 1bfe7ac... sleep
->>>>>>> 8b67d24e8d635b988866369ddd9b8b1ff39e3f1a
+/*   Created: 2021/04/21 07:37:56 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/21 08:17:52 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,20 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ten_queens_puzzle.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanghyle <snaghyle@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sanghyle <sanghyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD
-/*   Created: 2021/04/08 01:15:49 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/08 01:45:52 by sanghyle         ###   ########.fr       */
-=======
-<<<<<<< HEAD
-/*   Created: 2021/04/08 23:04:24 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/09 00:03:00 by sanghyle         ###   ########.fr       */
-=======
-/*   Created: 2021/04/07 20:52:56 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/07 20:52:58 by sanghyle         ###   ########.fr       */
->>>>>>> parent of 1bfe7ac... sleep
->>>>>>> 8b67d24e8d635b988866369ddd9b8b1ff39e3f1a
+/*   Created: 2021/04/21 07:37:14 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/21 07:37:29 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

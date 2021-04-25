@@ -3,17 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-<<<<<<< HEAD
-/*   By: sanghyle <sanghyle@student.42.kr>          +#+  +:+       +#+        */
+/*   By: sanghyle <sanghyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/06 15:47:40 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/06 15:52:45 by sanghyle         ###   ########.fr       */
-=======
-/*   By: sanghyle <sanghyle@student.42seoul.kr>     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/05 16:58:10 by sanghyle          #+#    #+#             */
-/*   Updated: 2021/04/05 16:58:25 by sanghyle         ###   ########.fr       */
->>>>>>> parent of 4190d93... sleep
+/*   Created: 2021/04/23 01:32:33 by sanghyle          #+#    #+#             */
+/*   Updated: 2021/04/23 01:34:14 by sanghyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
