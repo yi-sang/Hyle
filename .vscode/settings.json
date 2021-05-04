@@ -3,6 +3,8 @@
         "stdio.h": "c",
         "random": "c",
         "string.h": "c",
-        "limits": "c"
+        "limits": "c",
+        "1316.C": "cpp",
+        "sstream": "c"
     }
 }
