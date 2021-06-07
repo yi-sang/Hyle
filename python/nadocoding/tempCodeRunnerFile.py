@@ -1,0 +1,1 @@
+nums.append(int(nums[0] / nums[1]))
