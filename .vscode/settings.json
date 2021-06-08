@@ -6,5 +6,6 @@
         "limits": "c",
         "1316.C": "cpp",
         "sstream": "c"
-    }
+    },
+    "python.pythonPath": "/usr/bin/python3"
 }
