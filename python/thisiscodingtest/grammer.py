@@ -364,4 +364,4 @@ def heapsort(iterable) :
     return(result)
 result = heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
 print(result)
-# 기본 개념이해가 필요할 것 같다. 우선 코드업 100제를 풀고 진행
+# 기본 개념이해가 필요할 것 같다. 우선 코드업 100제를 풀고 난 후 진행
