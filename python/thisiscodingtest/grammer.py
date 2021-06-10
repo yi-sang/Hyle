@@ -321,7 +321,6 @@ print(type(data))
 data = sorted((1, 2, 3, 4))
 print(type(data))
 # 2. itertools
-# permutations 순열 (순서 고려)
 from itertools import permutations
 
 data = ['a', 'b', 'c']

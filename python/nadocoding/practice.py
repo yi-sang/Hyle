@@ -335,7 +335,7 @@ print(subway1.count("유재석")) # 2
 subway1.remove("유재석") # 리스트 삭제
 print(subway1) # ['정형돈', '조세호', '박명수', '유재석']
 # 정렬
-subway1.sort() # 사전 순서
+subway1.sort() # 사전 순서대로
 print(subway1) # ['박명수', '유재석', '유재석', '정형돈', '조세호']
 subway1.reverse()# 거꾸로
 print(subway1) # ['조세호', '정형돈', '유재석', '유재석', '박명수']
