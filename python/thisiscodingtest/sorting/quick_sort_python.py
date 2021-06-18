@@ -10,5 +10,5 @@ def quick_sort_python(array):
     left_side = [x for x in tail if x <= pivot]
     right_side = [x for x in tail if x > pivot]
 
-    return  [pivot]
+    return quick_sort_python(left_side) + [pivot] + quick_sort_python(right_side)
 print(quick_sort_python(array))

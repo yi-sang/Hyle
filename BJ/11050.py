@@ -1,4 +1,4 @@
-from itertools import *
+from math import factorial
 n, k = map(int, input().split())
-a = list(combinations(n, k))
-print(len(a))
+b = factorial(n) // (factorial(k) * factorial(n - k))
+print(b)
