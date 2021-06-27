@@ -20,5 +20,5 @@ def solution(N, stages):
     # answer = dict(sorted(ans.items(), key=lambda x : x[1], reverse = 1))
     # answer = list(answer.keys())
     answer = sorted(ans, key = lambda x : ans[x], reverse = 1)
-    print(answer)
+    print(answer) 
     return answer
